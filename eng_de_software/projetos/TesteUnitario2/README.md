@@ -6,6 +6,7 @@ Este projeto contém **testes unitários em Java usando JUnit 5** para a classe 
 
 src/
 main/java/br/edu/exemplo/ContaBancaria.java
+---
 test/java/br/edu/exemplo/ContaBancariaTest.java
 
 `ContaBancaria.java`: Classe com operações de conta bancária (depósito, saque, transferência).  
