@@ -20,13 +20,13 @@ test/java/br/edu/exemplo/ContaBancariaTest.java
 ## Caso queira usá-lo
 
 # clonar o projeto
-'''git clone https://github.com/Edumedeirosz/UENP_Projetos.git'''
+```git clone https://github.com/Edumedeirosz/UENP_Projetos.git```
 
 # entrar na pasta
-'''cd TesteUnitario2'''
+```cd TesteUnitario2```
 
 # se estiver usando Maven, rodar os testes
-'''mvn test'''
+```mvn test```
 
 ## Rodando os Testes
 
