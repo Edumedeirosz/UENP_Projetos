@@ -62,7 +62,7 @@ Não serão testados:
 - **Hardware:** Notebook Lenovo  
 - **SO:** Windows 10  
 - **Software:** IntelliJ IDEA  
-- **Framework:** JUnit 5  
+- **Framework:** JUnit 5 
 
 ---
 
@@ -94,10 +94,11 @@ Não serão testados:
 
 # 🧪 Cenários de Teste
 
+**Pré-condição:** —  
+
 ## CT-001 – Criar conta com nome válido
 **Prioridade:** P1  
 **Objetivo:** Verificar criação correta da conta  
-**Pré-condição:** —  
 **Passos:**  
 1. Criar `ContaBancaria("João")`  
 **Resultado Esperado:**  
@@ -107,7 +108,7 @@ Não serão testados:
 ---
 
 ## CT-002 – Depósito válido
-**Prioridade:** P2  
+**Prioridade:** P1  
 **Objetivo:** Validar depósito simples  
 **Passos:**  
 1. Criar conta "Maria"  
@@ -118,7 +119,7 @@ Não serão testados:
 ---
 
 ## CT-003 – Saque com saldo suficiente
-**Prioridade:** P2  
+**Prioridade:** P2
 **Objetivo:** Verificar saque válido  
 **Passos:**  
 1. Criar conta "Pedro"  
@@ -141,7 +142,7 @@ Não serão testados:
 
 ## CT-005 – Depósito adiciona corretamente o saldo
 **Prioridade:** P2  
-**Objetivo:** Garantir operação matemática correta  
+**Objetivo:** Garantir que saldo alto será validado. 
 **Passos:**  
 1. Criar conta "Eduardo Medeiros"  
 2. Depositar 2006.00  
@@ -157,7 +158,7 @@ Não serão testados:
 1. Criar conta "Pedro"  
 2. Depositar -17  
 **Resultado Esperado:**  
-- `IllegalArgumentException`  
+- `IllegalArgumentException`
 
 ---
 
