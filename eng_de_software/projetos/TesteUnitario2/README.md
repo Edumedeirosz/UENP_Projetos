@@ -4,13 +4,13 @@ Documentação criada para demonstração e validação das regras de negócio d
 
 ---
 
-## 🥅 1. Objetivo
+## 1. Objetivo
 
 Realizar testes para evidenciar bugs ou problemas que afetariam um caso real onde um cliente poderia ter dores com possíveis situações na conta bancária.
 
 ---
 
-## 📌 2. Escopo
+## 2. Escopo
 
 Serão testados:
 - Métodos da classe `ContaBancaria`.
@@ -24,7 +24,7 @@ Não serão testados:
 
 ---
 
-## ✅ 3. O que Esperar (Aceite)
+## 3. O que Esperar (Aceite)
 
 - Transferência correta entre contas.
 - A criação de usuário deve ser funcional.
@@ -36,7 +36,7 @@ Não serão testados:
 
 ---
 
-## 📋 4. Critérios
+## 4. Critérios
 
 ### 4.1 Entrada
 - Ambiente acessível e seguro.
@@ -50,14 +50,14 @@ Não serão testados:
 
 ---
 
-## ⛔ 5. Caso de Suspensão
+## 5. Caso de Suspensão
 
 - Se houver dano crítico impedindo testes, eles serão suspensos.
 - Serão retomados assim que possível.
 
 ---
 
-## 💻 6. Ambiente de Teste
+## 6. Ambiente de Teste
 
 - **Hardware:** Notebook Lenovo  
 - **SO:** Windows 10  
@@ -66,7 +66,7 @@ Não serão testados:
 
 ---
 
-## 🧪 7. Dados de Teste
+## 7. Dados de Teste
 
 - Dados criados apenas para uso demonstrativo.
 - Valores aleatórios, como `100.7777777777` para validação decimal.
@@ -74,7 +74,7 @@ Não serão testados:
 
 ---
 
-## ⚠️ 8. Riscos
+## 8. Riscos
 
 - Transferências negativas.
 - Depósitos negativos.
@@ -84,7 +84,7 @@ Não serão testados:
 
 ---
 
-## 🏷️ 9. Prioridades
+## 9. Prioridades
 
 - **P1:** Crítico  
 - **P2:** Importante  
@@ -92,7 +92,7 @@ Não serão testados:
 
 ---
 
-# 🧪 Cenários de Teste
+# Cenários de Teste
 
 **Pré-condição:** —  
 
@@ -280,27 +280,31 @@ Não serão testados:
 
 ## 📄 Casos de Teste – ContaBancaria
 
-| ID  | Descrição                                         | Entrada                         | Resultado Esperado                         | Prioridade | Obtido | Status |
-|-----|---------------------------------------------------|----------------------------------|--------------------------------------------|------------|--------|--------|
-| CT01 | Criar conta com titular válido                    | titular="Eduardo"                | Conta criada, saldo=0                      | Alta       |        |        |
-| CT02 | Criar conta com titular inválido                  | titular=""                       | IllegalArgumentException                   | Alta       |        |        |
-| CT03 | Criar conta com titular nulo                      | titular=null                    | IllegalArgumentException                   | Alta       |        |        |
-| CT04 | Depósito válido                                   | depósito=100                     | saldo=100                                  | Alta       |        |        |
-| CT05 | Depósito zero                                     | depósito=0                       | IllegalArgumentException                   | Alta       |        |        |
-| CT06 | Depósito negativo                                 | depósito=-50                     | IllegalArgumentException                   | Alta       |        |        |
-| CT07 | Saque válido                                      | saldo=200, saque=50              | saldo=150                                  | Alta       |        |        |
-| CT08 | Saque acima do saldo                              | saldo=20, saque=50               | IllegalStateException                      | Alta       |        |        |
-| CT09 | Saque zero                                        | saque=0                          | IllegalArgumentException                   | Alta       |        |        |
-| CT10 | Saque negativo                                    | saque=-10                        | IllegalArgumentException                   | Alta       |        |        |
-| CT11 | Transferência válida                              | origem=300, valor=100            | origem=200, destino=100                    | Alta       |        |        |
-| CT12 | Transferência para destino nulo                   | destino=null                     | IllegalArgumentException                   | Média      |        |        |
-| CT13 | Transferência maior que saldo                     | origem=10, valor=100             | IllegalStateException                      | Alta       |        |        |
-| CT14 | Transferência zero                                | valor=0                          | IllegalArgumentException                   | Alta       |        |        |
-| CT15 | Transferência negativa                            | valor=-20                        | IllegalArgumentException                   | Alta       |        |        |
+| ID     | Descrição                                                | Entrada                                                                 | Resultado Esperado                                  | Prioridade | Obtido | Status |
+|--------|-----------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------|------------|--------|--------|
+| CT-001 | Criar conta com titular válido                            | titular="Eduardo"                                                      | Conta criada, saldo = 0                              | P1         |        |        |
+| CT-002 | Criar conta com titular inválido (string vazia)           | titular=""                                                             | IllegalArgumentException                             | P1         |        |        |
+| CT-003 | Criar conta com titular nulo                              | titular = null                                                         | IllegalArgumentException                             | P1         |        |        |
+| CT-004 | Depósito válido                                           | depósito = 100                                                         | saldo = 100                                          | P2         |        |        |
+| CT-005 | Depósito zero                                             | depósito = 0                                                           | IllegalArgumentException                             | P1         |        |        |
+| CT-006 | Depósito negativo                                         | depósito = -50                                                         | IllegalArgumentException                             | P1         |        |        |
+| CT-007 | Saque válido                                              | saldo inicial 200, saque = 50                                         | saldo final = 150                                    | P2         |        |        |
+| CT-008 | Saque acima do saldo                                      | saldo inicial 20, saque = 50                                          | IllegalStateException                                | P1         |        |        |
+| CT-009 | Saque zero                                                | saque = 0                                                              | IllegalArgumentException                             | P1         |        |        |
+| CT-010 | Saque negativo                                            | saque = -10                                                            | IllegalArgumentException                             | P1         |        |        |
+| CT-011 | Transferência válida                                      | origem = 300, destino = 0, valor = 100                                | origem = 200, destino = 100                          | P2         |        |        |
+| CT-012 | Transferência com destino nulo                            | contaDestino = null                                                    | IllegalArgumentException                             | P1         |        |        |
+| CT-013 | Transferência maior que saldo                             | origem = 10, valor = 100                                               | IllegalStateException                                | P1         |        |        |
+| CT-014 | Transferência zero                                        | valor = 0                                                              | IllegalArgumentException                             | P1         |        |        |
+| CT-015 | Transferência negativa                                    | valor = -20                                                            | IllegalArgumentException                             | P1         |        |        |
+| CT-016 | Transferência para a própria conta *(BUG encontrado)*     | destino = mesma conta                                                  | IllegalArgumentException (esperado — falha atual)    | P1         |        |        |
+| CT-017 | Precisão decimal em depósitos                             | depósitos: 100.7777777777 e 2.19                                       | saldo = 102.9677777777                               | P3         |        |        |
+| CT-018 | Transferências encadeadas                                 | 4 contas → transferências sucessivas                                  | saldo final = 25 em todas as contas                  | P2         |        |        |
+| CT-019 | Mensagens de erro específicas                             | múltiplos erros propositalmente causados                              | exceções corretas para cada regra                    | P3         |        |        |
 
 ---
 
-# 🐞 Relatório de Bugs
+# Relatório de Bugs
 
 - **Bug encontrado:** Sistema permite transferência para a mesma conta  
 - **Caso:** CT09  
