@@ -4,11 +4,9 @@ Este projeto contém **testes unitários em Java usando JUnit 5** para a classe 
 
 ## Estrutura do Projeto
 
-src/
-main/java/br/edu/exemplo/ContaBancaria.java
-#
-test/java/br/edu/exemplo/ContaBancariaTest.java
-#
+```src/```
+```main/java/br/edu/exemplo/ContaBancaria.java```
+```test/java/br/edu/exemplo/ContaBancariaTest.java```
 
 `ContaBancaria.java`: Classe com operações de conta bancária (depósito, saque, transferência).  
 `ContaBancariaTest.java`: Testes unitários cobrindo os principais comportamentos da classe, podendo testar erros possíveis.
