@@ -1,7 +1,5 @@
 # Carrinho Controlado por Sensores - Arduino
 
-![Medalha](https://i.imgur.com/lxRXaV6.jpeg)
-
 ## Descrição do Projeto
 Este projeto consiste em um carrinho controlado com sensores de linha, desenvolvido com Arduino IDE. O carrinho utiliza dois motores controlados por ponte H e sensores que detectam linhas no percurso, permitindo que ele siga a rota corretamente, inclusive em cruzamentos.
 
@@ -63,3 +61,5 @@ O projeto foi realizado em equipe e conquistou **2º lugar em uma competição a
 - O comportamento do carrinho permite **seguir linhas e cruzamentos de forma confiável**, garantindo segundo lugar em uma competição acadêmica.
 
 ---
+
+![Medalha](https://i.imgur.com/lxRXaV6.jpeg)
